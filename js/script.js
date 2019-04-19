@@ -1,11 +1,21 @@
+  
 (function () {
-    var elem = document.querySelector('.main-carousel');
-    var flkty = new Flickity(elem, {
+    var carouselWrapper = document.querySelector('.main-carousel')
+ 
+    var templateSlide = document.getElementById('template-slide').innerHTML;
+    Mustache.parse(templateSlide);
+    var slidesHTML = ""
+    slideData.forEach(e => slidesHTML += Mustache.render(templateSlide, e))
+ 
+    carouselWrapper.insertAdjacentHTML('afterbegin', slidesHTML);
+  
+    var flkty = new Flickity(carouselWrapper, {
         cellAlign: 'left',
         contain: true,
         pageDots: false,
         hash: true
     });
+
     document.querySelector('.btnRestart').addEventListener('click', function () {
         flkty.select(0)
     })
