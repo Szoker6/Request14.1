@@ -2,7 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8">
-    <title>Plugin work</title>
+    <title>Request 14.2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/flickity.min.css">
@@ -10,39 +10,58 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-        <div class="wrapper">
-                <div class="main-carousel">
-                    <div style="background-image: url(./images/Chiny.jpg)" class="carousel-cell" id="carousel-cell1">
-                        <div class="container">
-                            <h2>Miejsca, które zwiedzę w przyszłośći:</h2>
-                        </div>
-                    </div>
-                    <div style="background-image: url(./images/Grecja.jpg)" class="carousel-cell" id="carousel-cell2">
-                        <div class="container">
-                            <h2>Grecja</h2>
-                        </div>
-                    </div>
-                    <div style="background-image: url(./images/NewYork.jpg)" class="carousel-cell" id="carousel-cell3">
-                        <div class="container">
-                            <h2>New york</h2>
-                        </div>
-                    </div>
-                    <div style="background-image: url(./images/RioDeJaneiro.jpg)" class="carousel-cell"
-                        id="carousel-cell4">
-                        <div class="container">
-                            <h2>Rio de janeiro</h2>
-                        </div>
-                    </div>
-                    <div style="background-image: url(./images/Rzym.jpg)" class="carousel-cell" id="carousel-cell5">
-                        <div class="container">
-                            <h2>Rzym</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar"></div>
-                <button class="btnRestart">Restart</button>
+    <div class="wrapper">
+        <div class="main-carousel"></div>
+        <div class="progress-bar"></div>
+        <button class="btnRestart">Restart</button>
+    </div>
+    <script id="template-slide" type="x-tmpl-mustache">
+        <div style="background-image: url({{imageUrl}})" class="carousel-cell" id="{{id}}">
+            <div class="container">
+                <h2>{{title}}</h2>
+            </div>
+        </div>
+    </script>
+    <script>
+        var slideData = [
+            {
+                imageUrl: "./images/ziemia.jpg",
+                title: "Miejsca, które zwiedzę w przyszłośći:",
+                id: "carousel-cell1"
+            },
+            {
+                imageUrl: "./images/Chiny.jpg",
+                title: "Chiny:",
+                id: "carousel-cell2"
+            },
+            {
+                imageUrl: "./images/Grecja.jpg",
+                title: "Grecja",
+                id: "carousel-cell3"
+            },
+            {
+                imageUrl: "./images/NewYork.jpg",
+                title: "New York",
+                id: "carousel-cell4"
+            },
+            {
+                imageUrl: "./images/RioDeJaneiro.jpg",
+                title: "Rio De Janeiro",
+                id: "carousel-cell5"
+            },
+            {
+                imageUrl: "./images/Rzym.jpg",
+                title: "Rzym",
+                id: "carousel-cell6"
+            }
+        ];
+    </script>
     <script src="js/flickity.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="node_modules/mustache/mustache.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
+
+<body>
+    
