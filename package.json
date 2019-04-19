@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "flickity": "^2.2.0",
+    "mustache": "^3.0.1",
     "normalize.css": "^8.0.1"
   }
 }
