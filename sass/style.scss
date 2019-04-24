@@ -58,6 +58,10 @@
     width: 0;
     background-image: linear-gradient(90deg, rgb(170, 212, 231), rgb(199, 233, 199), rgb(248, 253, 182), rgb(169, 238, 221))
 }
+#map {
+    height: 400px;  
+    width: 100%;   
+   }
 
 @media (max-width: 580px) {
     .carousel-cell {

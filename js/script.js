@@ -25,5 +25,21 @@
         progress = Math.max(0, Math.min(1, progress));
         progressBar.style.width = progress * 100 + '%';
     });
+    window.initMap = function() {
+	
+		var uluru = {lat: 41.899275, lng: 12.478255};
+		
+		var map = new google.maps.Map(document.getElementById('map'), {
+		
+			zoom: 4,
+			center: uluru
+		});
+		
+		var marker = new google.maps.Marker({
+			
+			position: uluru,
+			map: map
+		}); 
+	}	 
 
-})()
+});

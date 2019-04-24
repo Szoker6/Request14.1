@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
@@ -15,6 +16,9 @@
         <div class="progress-bar"></div>
         <button class="btnRestart">Restart</button>
     </div>
+    <div id="map"></div>
+    <h3>My Google Maps Demo</h3>
+	<p id="infos"></p>
     <script id="template-slide" type="x-tmpl-mustache">
         <div style="background-image: url({{imageUrl}})" class="carousel-cell" id="{{id}}">
             <div class="container">
@@ -32,27 +36,32 @@
             {
                 imageUrl: "./images/Chiny.jpg",
                 title: "Chiny:",
-                id: "carousel-cell2"
+                id: "carousel-cell2",
+                coords: {lat: 36.111998, lng: 102.267816}
             },
             {
                 imageUrl: "./images/Grecja.jpg",
                 title: "Grecja",
-                id: "carousel-cell3"
+                id: "carousel-cell3",
+                coords: {lat: 39.417295, lng: 22.588658}
             },
             {
                 imageUrl: "./images/NewYork.jpg",
                 title: "New York",
-                id: "carousel-cell4"
+                id: "carousel-cell4",
+                coords: {lat: 40.714527,lng: -73.986481}
             },
             {
                 imageUrl: "./images/RioDeJaneiro.jpg",
                 title: "Rio De Janeiro",
-                id: "carousel-cell5"
+                id: "carousel-cell5",
+                coords: {lat: -22.906699, lng: -43.188875}
             },
             {
                 imageUrl: "./images/Rzym.jpg",
                 title: "Rzym",
-                id: "carousel-cell6"
+                id: "carousel-cell6",
+                coords: {lat: 41.899275, lng: 12.478255}
             }
         ];
     </script>
@@ -60,6 +69,7 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="node_modules/mustache/mustache.min.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx3JQ9a29phvqX_h6gD7OISpH0IyLqPEA&callback=initMap"></script>
   </body>
 </html>
 
